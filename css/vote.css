@@ -20,6 +20,7 @@ header {
 #wrap {
   height: 27.5rem;
   overflow: hidden;
+  display: flex;
 }
 
 iframe {
