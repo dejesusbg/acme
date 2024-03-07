@@ -1,0 +1,38 @@
+body {
+  height: 97.5%;
+}
+
+header {
+  height: 20%;
+}
+
+#wrap {
+  height: 77.5%;
+  padding: 0;
+  overflow: hidden;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+}
+
+iframe {
+  width: 60rem;
+  height: 125%;
+  transform: scale(0.625);
+  transform-origin: 50% 0;
+  position: relative;
+}
+
+footer {
+  display: flex;
+  text-transform: initial;
+  align-items: center;
+  font-weight: 500;
+  flex-direction: column;
+  transform: translateX(-2rem);
+  margin: .25rem;
+}
+
+footer span:nth-last-child(1) {
+  font-weight: 725;
+}
