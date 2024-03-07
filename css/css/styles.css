@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,725;1,725&display=swap');
+
+:root {
+  --acme-blue: #2d506c;
+  --acme-blue-v2: #5180a4;
+  --acme-blue-v3: #002c5c;
+  --acme-white: #fcfaff;
+  --acme-white-v2: #e4eaf6;
+  --acme-white-v3: #ecf3fe;
+  --acme-gray: #ededed;
+  --acme-black: #333132;
+  --acme-black-v2: #1d2223;
+  --acme-gold: #edb23b;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--acme-black);
+  font-weight: 725;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--acme-white);
+  text-transform: uppercase;
+}
+
+.blue-txt {
+  color: var(--acme-blue);
+}
