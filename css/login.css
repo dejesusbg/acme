@@ -1,13 +1,7 @@
-:root {
-  --container-col: #fcfaff;
-  --background-col: #ecf3fe;
-  --on-container-col: #1d2223;
-  --primary-col: #5180a4;
-}
-
 body {
-  color: var(--on-container-col);
-  background-color: var(--background-col);
+  color: var(--acme-black-v2);
+  background-color: var(--acme-white-v3);
+  text-transform: initial;
 }
 
 /* container */
@@ -15,12 +9,12 @@ body {
   position: relative;
   width: 20rem;
   padding: 2rem 0 3rem;
-  color: var(--on-container-col);
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   border-radius: 2.5rem;
-  background-color: var(--container-col);
+  color: var(--acme-black);
+  background-color: var(--acme-white);
 }
 
 #container,
@@ -42,9 +36,8 @@ input {
   width: 90%;
   margin: 0.5rem 0;
   padding: 0.75rem 1rem;
-  border: 1px solid var(--black-col);
-  font: 500 0.9rem / 1.25rem Roboto, sans-serif;
-  color: var(--on-container-col);
+  border: 1px solid var(--acme-black-v2);
+  font: var(--acme-label);
   overflow: overlay;
   text-overflow: ellipsis;
   border-radius: 0.5rem;
@@ -52,7 +45,7 @@ input {
 
 input:hover,
 input:focus {
-  background-color: var(--select-white-col) !important;
+  background-color: var(--acme-white-v3) !important;
 }
 
 button {
@@ -61,8 +54,8 @@ button {
   padding: 0 1.5rem;
   border: 0;
   color: white;
-  font: 500 0.9rem / 1.25rem Roboto, sans-serif;
-  background: var(--primary-col);
+  font: var(--acme-label);
+  background: var(--acme-blue-v2);
   border-radius: 1.3rem;
   white-space: nowrap;
 }

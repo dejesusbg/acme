@@ -1,0 +1,125 @@
+body {
+  background-color: var(--acme-gray);
+  height: 90%;
+}
+
+/* header */
+header {
+  display: flex;
+  height: 30%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5%;
+}
+
+header img {
+  height: 100%;
+}
+
+header div {
+  display: flex;
+  margin: 0 -1%;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header h1 {
+  margin: -0.125rem;
+  font-size: 2.25rem;
+}
+
+header hr {
+  width: 110%;
+  border-top: 4px solid var(--acme-gold);
+  margin-left: -5%;
+}
+
+header h2 {
+  margin: 2% 0 0 2%;
+  line-height: 1.75rem;
+  text-transform: none;
+  color: transparent;
+  align-self: baseline;
+  -webkit-text-stroke: 1px var(--acme-blue);
+}
+
+@media screen and (max-width: 910px) {
+  header img {
+    height: 75%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  header img {
+    height: 50%;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+  }
+
+  header h2 {
+    line-height: 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+/* ballot cards */
+#container {
+  display: flex;
+  justify-content: center;
+  min-height: 60%;
+  flex-wrap: wrap;
+  align-content: baseline;
+}
+
+#container div.card {
+  display: flex;
+  width: 20rem;
+  margin: 0.5rem 2.75rem;
+  padding: 0.5rem 1.25rem;
+  border: 3px solid var(--acme-black);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  flex-wrap: wrap;
+  gap: 0 3rem;
+  border-radius: 1.5rem;
+  background-color: white;
+}
+
+#container div.card img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+}
+
+#container div.card span.num {
+  font-size: 6rem;
+}
+
+#container div.card span.name {
+  font-size: 1.75rem;
+}
+
+#container div.card:hover {
+  cursor: pointer;
+  background-color: var(--acme-white-v2) !important;
+  transform: scale(1.025);
+}
+
+#container div.card:active {
+  transform: scale(0.9);
+}

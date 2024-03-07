@@ -1,123 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,725;1,725&display=swap");
+
 :root {
-  --blue-col: #2d506c;
-  --gold-col: #edb23b;
-  --black-col: #333132;
-  --white-col: #ededed;
-  --select-white-col: #e4eaf6;
-  --midnight-col: #002c5c;
+  --acme-blue: #2d506c;
+  --acme-blue-v2: #5180a4;
+  --acme-blue-v3: #002c5c;
+  --acme-white: #fcfaff;
+  --acme-white-v2: #e4eaf6;
+  --acme-white-v3: #ecf3fe;
+  --acme-gray: #ededed;
+  --acme-black: #333132;
+  --acme-black-v2: #1d2223;
+  --acme-gold: #edb23b;
+  --acme-label: 500 0.9rem / 1.25rem "Open Sans", sans-serif;
   user-select: none;
 }
 
+html,
 body {
-  --primary-100: #ffffff;
-  --primary-99: #fcfaff;
-  --primary-95: #ebf1ff;
-  --primary-90: #dbebff;
-  --primary-80: #a3d4ff;
-  --primary-60: #81b3da;
-  --primary-50: #6596bd;
-  --primary-40: #5180a4;
-  --primary-30: #37658b;
-  --primary-20: #1e4971;
-  --primary-10: #002c5c;
-  --secondary-100: #ffffff;
-  --secondary-99: #fbfaff;
-  --secondary-95: #ebf7ff;
-  --secondary-90: #ddf0f8;
-  --secondary-80: #c1d4dc;
-  --secondary-60: #8da0a5;
-  --secondary-50: #728388;
-  --secondary-40: #5b6c71;
-  --secondary-30: #455559;
-  --secondary-20: #2e3e42;
-  --secondary-10: #19282a;
-  --tertiary-100: #ffffff;
-  --tertiary-99: #fffcfa;
-  --tertiary-95: #ffebee;
-  --tertiary-90: #ffd6de;
-  --tertiary-80: #efb8c0;
-  --tertiary-60: #b4838c;
-  --tertiary-50: #986770;
-  --tertiary-40: #7f535c;
-  --tertiary-30: #633b43;
-  --tertiary-20: #4b262f;
-  --tertiary-10: #311119;
-  --neutral-100: #ffffff;
-  --neutral-99: #faffff;
-  --neutral-99-e1: #f5fdfe;
-  --neutral-99-e2: #ecfbfe;
-  --neutral-99-e3: #e3f9fd;
-  --neutral-99-e4: #dcf7fd;
-  --neutral-95: #f0f3f5;
-  --neutral-90: #e0e2e5;
-  --neutral-90-e1: #dfe3e4;
-  --neutral-90-e2: #dadfe0;
-  --neutral-90-e3: #d6dcdd;
-  --neutral-90-e4: #d3d9da;
-  --neutral-80: #c4c8ca;
-  --neutral-60: #8f9394;
-  --neutral-50: #75797a;
-  --neutral-40: #5c6161;
-  --neutral-30: #464949;
-  --neutral-30-e1: #47494a;
-  --neutral-30-e2: #494c4c;
-  --neutral-30-e3: #4a4e4e;
-  --neutral-30-e4: #4c5050;
-  --neutral-20: #2f3231;
-  --neutral-20-e1: #313434;
-  --neutral-20-e2: #343637;
-  --neutral-20-e3: #36393a;
-  --neutral-20-e4: #383c3d;
-  --neutral-10: #171c1a;
-  --neutral-10-e1: #1a1e1f;
-  --neutral-10-e2: #1d2223;
-  --neutral-10-e3: #202627;
-  --neutral-10-e4: #23292b;
-  --neutral-variant-100: #ffffff;
-  --neutral-variant-99: #fcfaff;
-  --neutral-variant-99-e1: #f5f9fe;
-  --neutral-variant-99-e2: #ecf3fe;
-  --neutral-variant-99-e3: #e3eefd;
-  --neutral-variant-99-e4: #dceafd;
-  --neutral-variant-95: #eff2fa;
-  --neutral-variant-90: #dfe2ec;
-  --neutral-variant-90-e1: #dee3ea;
-  --neutral-variant-90-e2: #d9dfe6;
-  --neutral-variant-90-e3: #d4dbe4;
-  --neutral-variant-90-e4: #d0d7e1;
-  --neutral-variant-80: #c4c7cf;
-  --neutral-variant-60: #8f9399;
-  --neutral-variant-50: #73767d;
-  --neutral-variant-40: #5c6166;
-  --neutral-variant-30: #45494f;
-  --neutral-variant-30-e1: #464a50;
-  --neutral-variant-30-e2: #484c52;
-  --neutral-variant-30-e3: #494e54;
-  --neutral-variant-30-e4: #4b4f56;
-  --neutral-variant-20: #2f3337;
-  --neutral-variant-20-e1: #313439;
-  --neutral-variant-20-e2: #34373c;
-  --neutral-variant-20-e3: #363a3f;
-  --neutral-variant-20-e4: #383c42;
-  --neutral-variant-10: #1b1e23;
-  --neutral-variant-10-e1: #1e2125;
-  --neutral-variant-10-e2: #202429;
-  --neutral-variant-10-e3: #23272d;
-  --neutral-variant-10-e4: #262a31;
-}
-
-html {
   height: 100%;
 }
 
 body {
-  height: 90%;
-  color: var(--black-col);
+  color: var(--acme-black);
   font-weight: 725;
   font-family: "Open Sans", sans-serif;
-  background-color: var(--white-col);
+  background-color: var(--acme-white);
+  text-transform: uppercase;
 }
 
 .blue-txt {
-  color: var(--blue-col);
+  color: var(--acme-blue);
 }
