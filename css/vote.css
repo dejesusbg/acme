@@ -1,47 +1,109 @@
 body {
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
 }
 
 /* header */
+header,
+nav {
+  display: flex;
+  padding: 0 12%;
+  align-items: center;
+}
+
 header {
-  height: 7.5rem;
-  background-color: var(--acme-gray);
+  height: 5.5rem;
+  justify-content: center;
+  gap: 2.5%;
+}
+
+header div#logo {
+  display: inherit;
+  height: 100%;
+  align-items: inherit;
+}
+
+header div#logo img {
+  height: 90%;
+}
+
+header span {
+  text-wrap: nowrap;
+}
+
+header h3 {
+  padding: 0 0.5rem;
+  border-right: 6px dotted var(--acme-gray);
+  border-left: 6px dotted var(--acme-gray);
+  text-wrap: nowrap;
+}
+
+header img#pfp {
+  height: 2.25rem;
+  border-radius: 100%;
+}
+
+header span#name {
+  margin: 0 -1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+nav {
+  height: 2.5rem;
+  text-transform: initial;
+  color: white;
+  outline: 3px solid var(--acme-black);
+  background-color: var(--acme-blue);
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-top: 7px solid var(--acme-gold);
+  border-bottom: 7px solid var(--acme-gold);
+  outline-offset: -3px;
+}
+
+nav a:hover {
+  color: var(--acme-white-v2);
+  cursor: pointer;
+  transform: scale(1.025);
 }
 
 /* frame */
 #container {
-  height: calc(100% - 11.25rem);
   display: flex;
-  justify-content: center;
+  height: calc(100% - 12.25rem);
   align-items: center;
+  justify-content: center;
 }
 
 #wrap {
+  display: flex;
   height: 27.5rem;
   overflow: hidden;
-  display: flex;
 }
 
 iframe {
   width: 60rem;
   height: 44rem;
+  box-shadow: 0 0 1rem -0.5rem rgba(0, 0, 0, 0.75);
   transform: scale(0.625);
   transform-origin: 50% 0;
-  box-shadow: 0 0 1rem -.5rem rgba(0, 0, 0, 0.75);
   border-radius: 2.5rem;
 }
 
 /* footer */
 footer {
   display: flex;
+  position: absolute;
+  width: 100%;
+  padding: 0.5rem 0;
   align-items: center;
   flex-direction: column;
-  width: 100%;
   bottom: 0;
-  padding: .5rem 0;
   background-color: var(--acme-gray-v2);
-  position: absolute;
   font-size: 0.9rem;
 }
 
