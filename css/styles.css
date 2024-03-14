@@ -46,8 +46,8 @@ button {
   background: var(--acme-blue-v2);
   border-radius: 1.3rem;
   white-space: nowrap;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 button:hover {
@@ -61,7 +61,6 @@ button:hover {
   padding: 0;
   color: var(--color-primary);
   background: transparent !important;
-  justify-content: center;
   border-radius: 5rem;
   min-width: unset;
 }
