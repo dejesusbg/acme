@@ -51,6 +51,32 @@ header span#name {
   font-weight: 500;
 }
 
+@media screen and (max-width: 850px) {
+  header > *:not(div) {
+    display: none;
+  }
+
+  header div h3 {
+    text-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header div#logo span {
+    display: none;
+    text-wrap: wrap;
+  }
+
+  header div h3 {
+    border: none;
+    font-size: 0.9rem;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
+
 nav {
   height: 2.5rem;
   text-transform: initial;
@@ -108,7 +134,7 @@ iframe {
   }
 
   iframe {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
 }
 
