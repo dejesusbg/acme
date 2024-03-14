@@ -24,13 +24,48 @@ body {
 }
 
 body {
+  text-transform: uppercase;
   color: var(--acme-black);
   font-weight: 725;
   font-family: "Open Sans", sans-serif;
   background-color: var(--acme-white);
-  text-transform: uppercase;
 }
 
 .blue-txt {
   color: var(--acme-blue);
+}
+
+/* buttons */
+button {
+  height: 2.5rem;
+  margin: 0.5rem 0.25rem 0.5rem auto;
+  padding: 0 1.5rem;
+  border: 0;
+  font: var(--acme-label);
+  color: white;
+  background: var(--acme-blue-v2);
+  border-radius: 1.3rem;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 1.25rem 1.25rem rgba(0, 0, 0, 0.05);
+}
+
+.icon-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  color: var(--color-primary);
+  background: transparent !important;
+  justify-content: center;
+  border-radius: 5rem;
+  min-width: unset;
+}
+
+.icon-btn span {
+  padding: 0.5rem;
 }

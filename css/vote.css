@@ -57,7 +57,7 @@ nav {
   color: white;
   outline: 3px solid var(--acme-black);
   background-color: var(--acme-blue);
-  gap: 1rem;
+  gap: 0.25rem;
   font-weight: 500;
   font-size: 1.2rem;
   border-top: 7px solid var(--acme-gold);
@@ -65,10 +65,17 @@ nav {
   outline-offset: -3px;
 }
 
+nav a {
+  display: inline-flex !important;
+  height: 100%;
+  padding: 0 0.75rem;
+  align-items: center;
+}
+
 nav a:hover {
   color: var(--acme-white-v2);
   cursor: pointer;
-  transform: scale(1.025);
+  box-shadow: inset 0 0 1.25rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 
 /* frame */
@@ -92,6 +99,39 @@ iframe {
   transform: scale(0.625);
   transform-origin: 50% 0;
   border-radius: 2.5rem;
+}
+
+/* phones */
+@media screen and (max-height: 700px) and (max-width: 500px) {
+  #wrap {
+    height: 25rem;
+  }
+
+  iframe {
+    transform: scale(.9);
+  }
+}
+
+/* small laptop */
+@media screen and (max-height: 700px) and (min-width: 500px) {
+  #wrap {
+    height: 24rem;
+  }
+
+  iframe {
+    transform: scale(0.54);
+  }
+}
+
+/* large desktop */
+@media screen and (min-height: 1000px) {
+  #wrap {
+    height: 36rem;
+  }
+
+  iframe {
+    transform: scale(0.8);
+  }
 }
 
 /* footer */
