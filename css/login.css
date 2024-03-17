@@ -41,6 +41,10 @@ body.dark #container {
   flex-direction: column;
 }
 
+#container input {
+  width: calc(100% - 3rem);
+}
+
 #container form button {
   margin-left: auto;
 }
