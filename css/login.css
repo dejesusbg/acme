@@ -1,65 +1,78 @@
-body {
-  text-transform: initial;
-  color: var(--acme-black-v2);
-  overflow: hidden;
-  background-color: var(--acme-white);
+/* container */
+#container,
+#container section,
+#container form {
+  display: flex;
 }
 
-/* container */
 #container {
-  position: relative;
-  width: 20rem;
-  padding: 2rem 0 3rem;
-  color: var(--acme-black);
-  box-shadow: 0 0 5rem -0.5rem rgba(255, 255, 255, 0.75);
+  position: absolute;
+  width: auto;
+  height: 16rem;
+  padding: 2.5rem;
+  color: var(--color-on-secondary-container);
+  align-items: center;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  background-color: var(--color-secondary-container);
   border-radius: 2.5rem;
-  background-color: var(--acme-white-v3);
-}
-
-#container,
-#container form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
-@media screen and (min-width: 500px) {
-  #container {
-    width: 30rem;
-    padding: 2rem 2rem 3rem 1rem;
-    justify-content: space-around;
-    flex-direction: row !important;
-  }
-
-  #container img {
-    width: min-content;
-    height: 12rem !important;
-  }
+body.dark #container {
+  color: var(--color-on-surface);
+  background-color: var(--color-surface-e4);
 }
 
 #container img {
-  width: min-content;
-  height: 9rem;
+  height: 5rem;
+  align-self: baseline;
 }
 
-/* form */
-input {
-  display: block;
-  width: 90%;
-  margin: 0.5rem 0;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--acme-black-v2);
-  font: var(--acme-label);
-  overflow: overlay;
-  text-overflow: ellipsis;
-  border-radius: 0.5rem;
+#container section {
+  width: 45rem;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: -0.5rem;
 }
 
-input:hover,
-input:focus {
-  background-color: var(--acme-white-v3) !important;
+#container form {
+  flex-direction: column;
+}
+
+#container form button {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 944px) {
+  #container section {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    height: auto;
+  }
+
+  #container section {
+    width: 16rem;
+    flex-direction: column;
+  }
+
+  #container form {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #container {
+    background-color: transparent;
+  }
+
+  #container section {
+    width: 15rem;
+  }
 }

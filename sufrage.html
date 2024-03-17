@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Eleccion Colegio ACME</title>
+    <title>Mesa #3 - Colegio ACME</title>
     <!-- ACME -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/vote.css" />
@@ -40,7 +40,7 @@
           <i class="material-symbols-rounded md3-nav__item__icon"
             >how_to_vote</i
           >
-          <span class="md3-nav__item__text">Personero</span>
+          <span class="md3-nav__item__text">Sufragio</span>
         </label>
       </a>
       <input
@@ -48,13 +48,14 @@
         type="radio"
         name="activity"
         id="to-contralor"
+        onclick="window.location='./results.html'"
       />
-      <a class="md3-nav__item" href="./contralor" tabindex="-1">
+      <a class="md3-nav__item" href="./results.html" tabindex="-1">
         <label class="md3-nav__item__label ripple" for="to-contralor">
           <i class="material-symbols-rounded md3-nav__item__icon"
             >voting_chip</i
           >
-          <span class="md3-nav__item__text">Contralor</span>
+          <span class="md3-nav__item__text">Resultados</span>
         </label>
       </a>
     </nav>
@@ -89,48 +90,60 @@
       <span>Desarrollado por:</span>
       <span>Ricardo Barrios García</span>
     </footer>
+    <dialog class="md3-dialog" id="info-dialog">
+      <span class="md3-dialog__headline">Info del estudiante</span>
+      <div class="md3-dialog__text">
+        <img src="./img/user.png" alt="Ricardo's picture" />
+        <span>Johan Gutierrez de la Valle<br> 2021291932 (9°)</span>
+      </div>
+      <button class="md3-btn md3-btn--filled md3-dialog__btn" type="button">
+        <span class="md3-btn__text"> Permitir </span>
+      </button>
+    </dialog>
     <main>
-      <h3>Bienvenido al módulo de votaciones</h3>
+      <h3>Módulo de Votación</h3>
       <h6>Juanito Perez - Mesa #3</h6>
-      <p>
-        Puedes votar por cualquiera de los siguientes candidatos para el
-        Gobierno Escolar 2024 del Colegio ACME.
-      </p>
-      <form id="acme-choice">
-        <input class="acme-choice__radio" type="radio" name="choice" id="01" />
-        <label for="01">
-          <div class="md3-card md3-card--filled">
-            <img src="./img/icon-1.png" alt="" />
-            <span class="name">Betty Laura Marmol Pedraza</span>
-            <span class="code">01</span>
-          </div>
-        </label>
-        <input class="acme-choice__radio" type="radio" name="choice" id="02" />
-        <label for="02">
-          <div class="md3-card md3-card--filled">
-            <img src="./img/icon-2.png" alt="" />
-            <span class="name">Vilma Johana Picapiedra Lisa</span>
-            <span class="code">02</span>
-          </div>
-        </label>
-        <input class="acme-choice__radio" type="radio" name="choice" id="03" />
-        <label for="03">
-          <div class="md3-card md3-card--filled">
-            <img src="./img/icon-3.png" alt="" />
-            <span class="name">Marge Rosa Simpson Acevedo</span>
-            <span class="code">03</span>
-          </div>
-        </label>
-        <input class="acme-choice__radio" type="radio" name="choice" id="04" />
-        <label for="04">
-          <div class="md3-card md3-card--filled">
-            <span class="name">Voto en Blanco</span>
-          </div>
-        </label>
-        <button class="md3-btn md3-btn--filled" type="submit">
-          <span class="md3-btn__text">Votar</span>
-        </button>
+      <form id="search-student">
+        <input
+          class="md3-input--text"
+          type="text"
+          placeholder="Buscar nombre o código"
+          required
+        />
       </form>
+      <table class="acme-table">
+        <tr>
+          <th>Nombre</th>
+          <th>Código</th>
+          <th>Grado</th>
+        </tr>
+        <tr>
+          <td>Juanito Perez</td>
+          <td class="acme-code">2021114011</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Fulano de Tal</td>
+          <td class="acme-code">2020004656</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>Armando Casas</td>
+          <td class="acme-code">2017032020</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>Hermenjilda Ramirez</td>
+          <td class="acme-code">2019382918</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Lucía Ramirez</td>
+          <td class="acme-code">2010920129</td>
+          <td>11</td>
+        </tr>
+        <tr></tr>
+      </table>
     </main>
 
     <!-- Material Design -->

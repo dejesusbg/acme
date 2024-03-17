@@ -1,179 +1,109 @@
-body {
-  margin: 0;
-  overflow: hidden;
-}
-
-/* header */
-header,
-nav {
+/* choices */
+form#acme-choice {
   display: flex;
-  padding: 0 12%;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+input.acme-choice__radio {
+  display: none;
+}
+
+div.md3-card {
+  display: flex;
   align-items: center;
+  transition: transform 0.2s;
+  gap: 1rem;
 }
 
-header {
-  height: 5.5rem;
-  justify-content: center;
-  gap: 2.5%;
-}
-
-header div#logo {
-  display: inherit;
-  height: 100%;
-  align-items: inherit;
-}
-
-header div#logo img {
-  height: 90%;
-}
-
-header span {
-  text-wrap: nowrap;
-}
-
-header h3 {
-  padding: 0 0.5rem;
-  border-right: 6px dotted var(--acme-gray);
-  border-left: 6px dotted var(--acme-gray);
-  text-wrap: nowrap;
-}
-
-header img#pfp {
-  height: 2.25rem;
+div.md3-card img {
+  width: 3 0.5rem;
+  height: 3.5rem;
   border-radius: 100%;
 }
 
-header span#name {
-  margin: 0 -1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 0.75rem;
-  font-weight: 500;
+div.md3-card span.name {
+  font: var(--font-title-l);
 }
 
-@media screen and (max-width: 850px) {
-  header > *:not(div) {
-    display: none;
-  }
-
-  header div h3 {
-    text-wrap: wrap;
-  }
+div.md3-card span.code {
+  font: var(--font-headline-l);
+  margin-left: auto;
+  margin-right: 0.75rem;
 }
 
-@media screen and (max-width: 650px) {
-  header div#logo span {
-    display: none;
-    text-wrap: wrap;
-  }
-
-  header div h3 {
-    border: none;
-    font-size: 0.9rem;
-  }
-
-  nav {
-    justify-content: center;
-  }
-}
-
-nav {
-  height: 2.5rem;
-  text-transform: initial;
-  color: white;
-  outline: 3px solid var(--acme-black);
-  background-color: var(--acme-blue);
-  gap: 0.25rem;
-  font-weight: 500;
-  font-size: 1.2rem;
-  border-top: 7px solid var(--acme-gold);
-  border-bottom: 7px solid var(--acme-gold);
-  outline-offset: -3px;
-}
-
-nav a {
-  display: inline-flex !important;
-  height: 100%;
-  padding: 0 0.75rem;
-  align-items: center;
-}
-
-nav a:hover {
-  color: var(--acme-white-v2);
+div.md3-card:hover {
   cursor: pointer;
-  box-shadow: inset 0 0 1.25rem 1.25rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
 }
 
-/* frame */
-#container {
+input.acme-choice__radio:checked + label div.md3-card {
+  border: 2px solid var(--color-on-primary-container);
+  transform: scale(0.99);
+}
+
+form#acme-choice button {
+  margin-left: auto !important;
+}
+
+/* search */
+form#search-student {
   display: flex;
-  height: calc(100% - 12.25rem);
+  margin: 0 1rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
-#wrap {
-  display: flex;
-  height: 27.5rem;
-  overflow: hidden;
-}
-
-iframe {
-  width: 60rem;
-  height: 44rem;
-  box-shadow: 0 0 1rem -0.5rem rgba(0, 0, 0, 0.75);
-  transform: scale(0.625);
-  transform-origin: 50% 0;
-  border-radius: 2.5rem;
-}
-
-/* phones */
-@media screen and (max-height: 700px) and (max-width: 500px) {
-  #wrap {
-    height: 25rem;
+@media screen and (max-width: 512px) {
+  form#search-student {
+    justify-content: space-between;
   }
 
-  iframe {
-    transform: scale(0.9);
+  form#search-student input {
+    width: calc(100% - 10rem);
   }
 }
 
-/* small laptop */
-@media screen and (max-height: 700px) and (min-width: 500px) {
-  #wrap {
-    height: 24rem;
-  }
-
-  iframe {
-    transform: scale(0.54);
-  }
-}
-
-/* large desktop */
-@media screen and (min-height: 1000px) {
-  #wrap {
-    height: 36rem;
-  }
-
-  iframe {
-    transform: scale(0.8);
-  }
-}
-
-/* footer */
-footer {
-  display: flex;
-  position: absolute;
+#info-dialog .md3-dialog__text {
+  display: inline-flex;
   width: 100%;
-  padding: 0.5rem 0;
+  text-align: center;
   align-items: center;
   flex-direction: column;
-  bottom: 0;
-  background-color: var(--acme-gray-v2);
-  font-size: 0.9rem;
+  gap: 1rem;
+  margin-bottom: .75rem;
 }
 
-footer span:nth-child(1) {
-  text-transform: initial;
-  font-weight: 500;
+#info-dialog img {
+  height: 8rem;
+}
+
+/* tables */
+.acme-table {
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  border: 1px solid var(--color-outline);
+  border-radius: 1rem;
+}
+
+.acme-table th,
+.acme-table td {
+  padding: 0.4rem 0.6rem;
+}
+
+.acme-table tr:nth-child(n + 2):hover {
+  background: var(--color-surface-variant-e2);
+  cursor: pointer;
+}
+
+.acme-code {
+  font-family: "Roboto Mono";
+  font-size: 90%;
+}
+
+@media screen and (max-width: 512px) {
+  .acme-table {
+    width: calc(100% - 2rem);
+  }
 }

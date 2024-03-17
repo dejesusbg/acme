@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Eleccion Colegio ACME</title>
+    <title>Resultados Elecciones ACME</title>
     <!-- ACME -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/vote.css" />
@@ -33,9 +33,9 @@
         type="radio"
         name="activity"
         id="to-personero"
-        checked
+        onclick="window.location='./sufrage.html'"
       />
-      <a class="md3-nav__item" href="#" tabindex="-1">
+      <a class="md3-nav__item" href="./sufrage.html" tabindex="-1">
         <label class="md3-nav__item__label ripple" for="to-personero">
           <i class="material-symbols-rounded md3-nav__item__icon"
             >how_to_vote</i
@@ -48,8 +48,9 @@
         type="radio"
         name="activity"
         id="to-contralor"
+        checked
       />
-      <a class="md3-nav__item" href="./contralor" tabindex="-1">
+      <a class="md3-nav__item" href="#" tabindex="-1">
         <label class="md3-nav__item__label ripple" for="to-contralor">
           <i class="material-symbols-rounded md3-nav__item__icon"
             >voting_chip</i
@@ -85,18 +86,14 @@
         </button>
       </section>
     </header>
-    <footer>
-      <span>Desarrollado por:</span>
-      <span>Ricardo Barrios García</span>
-    </footer>
     <main>
-      <h3>Bienvenido al módulo de votaciones</h3>
-      <h6>Juanito Perez - Mesa #3</h6>
+      <h3>Bienvenido, Juanito Perez</h3>
+      <h6>Mesa #3</h6>
       <p>
         Puedes votar por cualquiera de los siguientes candidatos para el
         Gobierno Escolar 2024 del Colegio ACME.
       </p>
-      <form id="acme-choice">
+      <form>
         <input class="acme-choice__radio" type="radio" name="choice" id="01" />
         <label for="01">
           <div class="md3-card md3-card--filled">
@@ -131,6 +128,10 @@
           <span class="md3-btn__text">Votar</span>
         </button>
       </form>
+      <footer>
+        <span>Desarrollado por:</span>
+        <span>Ricardo Barrios García</span>
+      </footer>
     </main>
 
     <!-- Material Design -->
