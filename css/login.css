@@ -41,10 +41,6 @@ body.dark #container {
   flex-direction: column;
 }
 
-#container input {
-  width: calc(100% - 3rem);
-}
-
 #container form button {
   margin-left: auto;
 }
@@ -68,6 +64,10 @@ body.dark #container {
   #container form {
     align-items: center;
     flex-direction: column;
+  }
+
+  #container form input {
+    width: calc(100% - 3rem);
   }
 }
 
