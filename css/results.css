@@ -22,6 +22,18 @@ div.md3-card span.acme-result {
   font: var(--font-display-l);
 }
 
+@media screen and (max-width: 768px) {
+  div#acme-stats div.md3-card {
+    flex: 45%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  div.md3-card span.acme-result {
+    font: var(--font-display-s);
+  }
+}
+
 div.md3-card:hover {
   cursor: pointer;
   transform: scale(1.01);
