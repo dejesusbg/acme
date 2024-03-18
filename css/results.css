@@ -1,0 +1,28 @@
+/* stats */
+div#acme-stats,
+div#acme-graphics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div#acme-stats div.md3-card {
+  display: flex;
+  flex: 20%;
+  transition: transform 0.2s;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+div#acme-graphics div.md3-card {
+  flex: 45%;
+}
+
+div.md3-card span.acme-result {
+  font: var(--font-display-l);
+}
+
+div.md3-card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}

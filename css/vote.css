@@ -72,7 +72,7 @@ form#search-student {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 #info-dialog img {
@@ -92,14 +92,18 @@ form#search-student {
   padding: 0.4rem 0.6rem;
 }
 
-.acme-table tr:nth-child(n + 2):hover {
-  background: var(--color-surface-variant-e2);
-  cursor: pointer;
-}
-
 .acme-code {
   font-family: "Roboto Mono";
   font-size: 90%;
+}
+
+.acme-table--voted {
+  background: var(--color-tertiary-container);
+}
+
+.acme-table tr:not(.acme-table--voted):nth-child(n + 2):hover {
+  background: var(--color-surface-variant-e2);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 512px) {

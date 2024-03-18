@@ -8,7 +8,7 @@
     <title>Resultados Elecciones ACME</title>
     <!-- ACME -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/vote.css" />
+    <link rel="stylesheet" href="./css/results.css" />
     <!-- Material Design -->
     <link rel="stylesheet" href="md3/styles/components.css" />
     <link rel="stylesheet" href="md3/styles/styles.css" />
@@ -86,52 +86,37 @@
         </button>
       </section>
     </header>
+    <footer>
+      <span>Desarrollado por:</span>
+      <span>Ricardo Barrios García</span>
+    </footer>
     <main>
-      <h3>Bienvenido, Juanito Perez</h3>
-      <h6>Mesa #3</h6>
-      <p>
-        Puedes votar por cualquiera de los siguientes candidatos para el
-        Gobierno Escolar 2024 del Colegio ACME.
-      </p>
-      <form>
-        <input class="acme-choice__radio" type="radio" name="choice" id="01" />
-        <label for="01">
-          <div class="md3-card md3-card--filled">
-            <img src="./img/icon-1.png" alt="" />
-            <span class="name">Betty Laura Marmol Pedraza</span>
-            <span class="code">01</span>
-          </div>
-        </label>
-        <input class="acme-choice__radio" type="radio" name="choice" id="02" />
-        <label for="02">
-          <div class="md3-card md3-card--filled">
-            <img src="./img/icon-2.png" alt="" />
-            <span class="name">Vilma Johana Picapiedra Lisa</span>
-            <span class="code">02</span>
-          </div>
-        </label>
-        <input class="acme-choice__radio" type="radio" name="choice" id="03" />
-        <label for="03">
-          <div class="md3-card md3-card--filled">
-            <img src="./img/icon-3.png" alt="" />
-            <span class="name">Marge Rosa Simpson Acevedo</span>
-            <span class="code">03</span>
-          </div>
-        </label>
-        <input class="acme-choice__radio" type="radio" name="choice" id="04" />
-        <label for="04">
-          <div class="md3-card md3-card--filled">
-            <span class="name">Voto en Blanco</span>
-          </div>
-        </label>
-        <button class="md3-btn md3-btn--filled" type="submit">
-          <span class="md3-btn__text">Votar</span>
-        </button>
-      </form>
-      <footer>
-        <span>Desarrollado por:</span>
-        <span>Ricardo Barrios García</span>
-      </footer>
+      <h3>Gobierno Escolar 2024</h3>
+      <h6>Juanito Perez - Mesa #3</h6>
+      <h5>Resultados de la mesa</h5>
+      <div id="acme-stats">
+        <div class="md3-card md3-card--outlined">
+          <span class="md3-card__headline">Votantes habilitados</span>
+          <span class="acme-result">25</span>
+        </div>
+        <div class="md3-card md3-card--outlined">
+          <span class="md3-card__headline">Votos recibidos</span>
+          <span class="acme-result">20</span>
+        </div>
+        <div class="md3-card md3-card--outlined">
+          <span class="md3-card__headline">Personero ganador</span>
+          <span class="acme-result">#03</span>
+        </div>
+        <div class="md3-card md3-card--outlined">
+          <span class="md3-card__headline">Contralor ganador</span>
+          <span class="acme-result">#02</span>
+        </div>
+      </div>
+      <h5>Votos</h5>
+      <div id="acme-graphics">
+        <div class="md3-card md3-card--elevated"></div>
+        <div class="md3-card md3-card--elevated"></div>
+      </div>
     </main>
 
     <!-- Material Design -->
