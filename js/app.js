@@ -1,5 +1,5 @@
 colorScheme("#2b506d", "#d83a55");
-// toggleDarkMode();
+toggleDarkMode();
 
 function voteDialog(e) {
   e.onclick = () => {
