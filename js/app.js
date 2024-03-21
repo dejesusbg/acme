@@ -25,7 +25,7 @@ function voteDialog(e) {
 
       customCloseDialog(dialog, true);
       // sistema da la orden de que el estudiante votó
-      setTimeout(studentVoted, 5000);
+      setTimeout(studentVoted, 10000);
     };
   };
 }
