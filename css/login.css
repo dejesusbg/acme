@@ -71,9 +71,9 @@ body.dark #container {
   }
 }
 
-@media screen and (max-width: 352px) {
+@media screen and (max-width: 320px) {
   #container {
-    background-color: transparent !important;
+    background-color: transparent;
   }
 
   #container section {

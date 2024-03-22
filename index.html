@@ -1,57 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Elecciones Colegio ACME</title>
+    <link rel="shortcut icon" href="./img/escudo.png" type="image/x-icon" />
+    <!-- ACME -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <!-- Material Design -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3@main/styles/components.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/styles.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <title>Ingresa al Colegio ACME</title>
-  <link rel="shortcut icon" href="./img/escudo.png" type="image/x-icon" />
-  <!-- ACME -->
-  <link rel="stylesheet" href="./css/styles.css" />
-  <link rel="stylesheet" href="./css/login.css" />
-  <!-- Material Design -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/components.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/styles.css" />
-</head>
-
-<body>
-  <main>
-    <button class="md3-btn md3-btn--icon md3-topbar__btn" onclick="toggleDarkMode()" style="float: right">
-      <span class="material-symbols-rounded md3-btn__icon"> dark_mode </span>
-    </button>
-    <a href="./sufrage.html">
-      <button class="md3-btn md3-btn--text" style="float: right; margin-top: 0.5rem">
-        <span class="md3-btn__text">Jurado</span>
-      </button>
-    </a>
-
-    <div id="container">
-      <img src="./img/escudo.png" alt="Badge Colegio ACME" />
-      <section>
-        <div>
-          <h4>Iniciar sesión</h4>
-          <p>Ingresa a tu cuenta para votar</p>
+  <body>
+    <div class="md3-menu md3-menu--sheet" id="login-by-menu">
+      <a href="./login.html?userType=0">
+        <div class="md3-menu__item">
+          <span class="material-symbols-rounded md3-menu__item__icon"
+            >person</span
+          >
+          <span class="md3-menu__item__text">Estudiante</span>
         </div>
-        <form action="./vote.html">
-          <input class="md3-input--text" type="email" placeholder="example@acme.com" required />
-          <input class="md3-input--text" type="password" placeholder="password" required />
-
-          <button class="md3-btn md3-btn--filled" type="submit">
-            <span class="md3-btn__text">Entrar</span>
-          </button>
-        </form>
-      </section>
+      </a>
+      <a href="./login.html?userType=1">
+        <div class="md3-menu__item">
+          <span class="material-symbols-rounded md3-menu__item__icon"
+            >local_police</span
+          >
+          <span class="md3-menu__item__text">Jurado</span>
+        </div>
+      </a>
     </div>
-  </main>
-  <!-- Material Design -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/monet.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/material-you.js"></script>
-  <!-- ACME -->
-  <script src="./js/app.js"></script>
-</body>
 
+    <header class="md3-topbar">
+      <section class="md3-topbar__leading">
+        <img src="./img/escudo.png" alt="Badge Colegio ACME" />
+        <span class="md3-topbar__title">Colegio ACME</span>
+      </section>
+      <section class="md3-topbar__trailing">
+        <button
+          class="md3-btn md3-btn--icon md3-topbar__btn"
+          onclick="toggleDarkMode()"
+        >
+          <span class="material-symbols-rounded md3-btn__icon">
+            dark_mode
+          </span>
+        </button>
+        <button
+          class="md3-btn md3-btn--text md3-topbar__btn"
+          click="login-by-menu"
+        >
+          <span class="material-symbols-rounded md3-btn__icon"> login </span>
+          <span class="md3-btn__text"> Ingresar </span>
+        </button>
+      </section>
+    </header>
+    <footer>
+      <span>Desarrollado por:</span>
+      <span>Ricardo Barrios García</span>
+    </footer>
+    <main>
+      <h3>Bienvenido a la página oficial del Colegio ACME</h3>
+      <h6>Haz click en cada noticia para ver más.</h6>
+      <div id="container">
+        <div class="md3-card md3-card--elevated acme-news">
+          <img
+            src="https://t3.ftcdn.net/jpg/00/83/04/44/360_F_83044426_dsXCRyQuX3wLLECdq2YBb6v4bgz8JFbm.jpg"
+            alt="ACME facade"
+            class="md3-card__media"
+          />
+          <span class="md3-card__headline">Escuela ACME</span>
+          <span class="md3-card__subhead"
+            >Calificada como la #1 del municipio.</span
+          >
+          <span class="md3-card__text">
+            La Escuela ACME, ubicada en el municipio de Warner Bros., es
+            reconocida como una de las mejores instituciones educativas de la
+            zona. <br /><br />
+            Su excelencia académica, su enfoque en la formación integral de los
+            estudiantes y su compromiso con la comunidad la convierten en una
+            opción destacada para la educación niños y jóvenes.</span
+          >
+        </div>
+        <div class="md3-card md3-card--elevated acme-news">
+          <img
+            src="https://img.freepik.com/foto-gratis/companeros-clase-pulgar-arriba-aula_1098-1243.jpg"
+            alt="ACME facade"
+            class="md3-card__media"
+          />
+          <span class="md3-card__headline">Felicidad</span>
+          <span class="md3-card__subhead">Caras felices, mentes atentas.</span>
+          <span class="md3-card__text">
+            En la Escuela ACME, la felicidad de los estudiantes es una
+            prioridad. Se promueve un ambiente positivo y acogedor, donde se
+            fomenta el desarrollo de las habilidades sociales y emocionales,
+            creando así una experiencia educativa integral y
+            enriquecedora.</span
+          >
+        </div>
+        <div class="md3-card md3-card--elevated acme-news">
+          <img
+            src="https://cdn.cnn.com/cnnnext/dam/assets/171120095159-cnnee-chile-vote-generico-full-169.jpg"
+            alt="ACME facade"
+            class="md3-card__media"
+          />
+          <span class="md3-card__headline">Elecciones 2024</span>
+          <span class="md3-card__subhead">Vota sabiamente.</span>
+          <span class="md3-card__text">
+            ¡Prepárate! Se acercan las votaciones para elegir el nuevo Gobierno
+            Escolar del Colegio ACME. Tu participación es importante para
+            construir un futuro mejor para nuestra institución.</span
+          >
+        </div>
+        <div class="md3-card md3-card--elevated acme-news">
+          <img
+            src="https://www.coldelvalle.edu.mx/wp-content/uploads/2023/09/10p.Que_es_una_feria_de_ciencias-min.jpg"
+            alt="ACME facade"
+            class="md3-card__media"
+          />
+          <span class="md3-card__headline">Próximamente</span>
+          <span class="md3-card__subhead">Desde Abril 24 - Mayo 2.</span>
+          <span class="md3-card__text">
+            ¡Descubre la magia de la ciencia en la Feria de Ciencias de nuestra
+            escuela! Proyectos increíbles, experimentos fascinantes y mucho más
+            te esperan. ¡No te lo pierdas!</span
+          >
+        </div>
+        <div class="md3-card md3-card--elevated acme-news">
+          <img
+            src="https://mlnxeapoeleq.i.optimole.com/w:auto/h:auto/q:mauto/f:best/https://i0.wp.com/thebulldogsbark.com/wp-content/uploads/2023/09/almuerzo-escolar.webp?fit=1000%2C667&ssl=1 "
+            alt="ACME facade"
+            class="md3-card__media"
+          />
+          <span class="md3-card__headline">Programa de alimentación</span>
+          <span class="md3-card__subhead">Disponible desde las 10 hrs.</span>
+          <span class="md3-card__text">
+            ¡Nutrición y energía para tu día! Almuerzos y refrigerios deliciosos
+            y nutritivos para todos los estudiantes. ¡Buen provecho!</span
+          >
+        </div>
+      </div>
+    </main>
+
+    <!-- Material Design -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/monet.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/material-you.js"></script>
+    <!-- ACME -->
+    <script src="./js/app.js"></script>
+  </body>
 </html>

@@ -27,6 +27,7 @@ footer {
   font: var(--font-label-m);
   z-index: 8;
   bottom: 0;
+  left: 0;
   background-color: var(--color-surface-e2);
 }
 
@@ -39,6 +40,7 @@ footer ~ main {
 }
 
 .md3-nav ~ footer {
+  left: 1rem;
   margin-left: 4rem;
 }
 

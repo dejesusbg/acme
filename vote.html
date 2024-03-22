@@ -1,120 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Elecciones Colegio ACME</title>
+    <link rel="shortcut icon" href="./img/escudo.png" type="image/x-icon" />
+    <!-- ACME -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/vote.css" />
+    <!-- Material Design -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/components.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/styles.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <title>Elecciones Colegio ACME</title>
-  <link rel="shortcut icon" href="./img/escudo.png" type="image/x-icon" />
-  <!-- ACME -->
-  <link rel="stylesheet" href="./css/styles.css" />
-  <link rel="stylesheet" href="./css/vote.css" />
-  <!-- Material Design -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/components.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/styles.css" />
-</head>
+  <body>
+    <nav class="md3-nav">
+      <input
+        class="md3-nav__item-radio"
+        type="radio"
+        name="activity"
+        id="to-home"
+        onclick="window.location='./index.html'"
+      />
+      <a class="md3-nav__item" href="./index.html" tabindex="-1">
+        <label class="md3-nav__item__label ripple" for="to-home">
+          <i class="material-symbols-rounded md3-nav__item__icon">home</i>
+          <span class="md3-nav__item__text">Inicio</span>
+        </label>
+      </a>
+      <input
+        class="md3-nav__item-radio"
+        type="radio"
+        name="activity"
+        id="to-personero"
+        checked
+      />
+      <a class="md3-nav__item" href="#" tabindex="-1">
+        <label class="md3-nav__item__label ripple" for="to-personero">
+          <i class="material-symbols-rounded md3-nav__item__icon"
+            >how_to_vote</i
+          >
+          <span class="md3-nav__item__text">Personero</span>
+        </label>
+      </a>
+      <input
+        class="md3-nav__item-radio"
+        type="radio"
+        name="activity"
+        id="to-contralor"
+      />
+      <a class="md3-nav__item" href="./contralor" tabindex="-1">
+        <label class="md3-nav__item__label ripple" for="to-contralor">
+          <i class="material-symbols-rounded md3-nav__item__icon"
+            >voting_chip</i
+          >
+          <span class="md3-nav__item__text">Contralor</span>
+        </label>
+      </a>
+    </nav>
 
-<body>
-  <nav class="md3-nav">
-    <input class="md3-nav__item-radio" type="radio" name="activity" id="to-home" />
-    <a class="md3-nav__item" href="./main" tabindex="-1">
-      <label class="md3-nav__item__label ripple" for="to-home">
-        <i class="material-symbols-rounded md3-nav__item__icon">home</i>
-        <span class="md3-nav__item__text">Inicio</span>
-      </label>
-    </a>
-    <input class="md3-nav__item-radio" type="radio" name="activity" id="to-personero" checked />
-    <a class="md3-nav__item" href="#" tabindex="-1">
-      <label class="md3-nav__item__label ripple" for="to-personero">
-        <i class="material-symbols-rounded md3-nav__item__icon">how_to_vote</i>
-        <span class="md3-nav__item__text">Personero</span>
-      </label>
-    </a>
-    <input class="md3-nav__item-radio" type="radio" name="activity" id="to-contralor" />
-    <a class="md3-nav__item" href="./contralor" tabindex="-1">
-      <label class="md3-nav__item__label ripple" for="to-contralor">
-        <i class="material-symbols-rounded md3-nav__item__icon">voting_chip</i>
-        <span class="md3-nav__item__text">Contralor</span>
-      </label>
-    </a>
-  </nav>
+    <header class="md3-topbar">
+      <section class="md3-topbar__leading">
+        <img src="./img/escudo.png" alt="Badge Colegio ACME" />
+        <span class="md3-topbar__title">Colegio ACME</span>
+      </section>
+      <section class="md3-topbar__trailing">
+        <button class="md3-btn md3-btn--icon md3-topbar__btn">
+          <span class="material-symbols-rounded md3-btn__icon"> settings </span>
+        </button>
+        <button
+          class="md3-btn md3-btn--icon md3-topbar__btn"
+          onclick="toggleDarkMode()"
+        >
+          <span class="material-symbols-rounded md3-btn__icon">
+            dark_mode
+          </span>
+        </button>
+        <button class="md3-btn md3-btn--icon md3-topbar__btn">
+          <img
+            class="md3-btn__icon"
+            src="./img/user.png"
+            alt="Ricardo's picture"
+          />
+        </button>
+      </section>
+    </header>
+    <footer>
+      <span>Desarrollado por:</span>
+      <span>Ricardo Barrios García</span>
+    </footer>
+    <main>
+      <h3>Bienvenido al módulo de votaciones</h3>
+      <h6>Juanito Perez - Mesa #3</h6>
+      <p>
+        Puedes votar por cualquiera de los siguientes candidatos para el
+        Gobierno Escolar 2024 del Colegio ACME.
+      </p>
+      <form id="acme-choice">
+        <input class="acme-choice__radio" type="radio" name="choice" id="01" />
+        <label for="01">
+          <div class="md3-card md3-card--filled">
+            <img src="./img/icon-1.png" alt="" />
+            <span class="name">Betty Laura Marmol Pedraza</span>
+            <span class="code">01</span>
+          </div>
+        </label>
+        <input class="acme-choice__radio" type="radio" name="choice" id="02" />
+        <label for="02">
+          <div class="md3-card md3-card--filled">
+            <img src="./img/icon-2.png" alt="" />
+            <span class="name">Vilma Johana Picapiedra Lisa</span>
+            <span class="code">02</span>
+          </div>
+        </label>
+        <input class="acme-choice__radio" type="radio" name="choice" id="03" />
+        <label for="03">
+          <div class="md3-card md3-card--filled">
+            <img src="./img/icon-3.png" alt="" />
+            <span class="name">Marge Rosa Simpson Acevedo</span>
+            <span class="code">03</span>
+          </div>
+        </label>
+        <input class="acme-choice__radio" type="radio" name="choice" id="04" />
+        <label for="04">
+          <div class="md3-card md3-card--filled">
+            <span class="name">Voto en Blanco</span>
+          </div>
+        </label>
+        <button class="md3-btn md3-btn--filled" type="submit">
+          <span class="md3-btn__text">Votar</span>
+        </button>
+      </form>
+    </main>
 
-  <header class="md3-topbar">
-    <section class="md3-topbar__leading">
-      <img src="./img/escudo.png" alt="Badge Colegio ACME" />
-      <span class="md3-topbar__title">Colegio ACME</span>
-    </section>
-    <section class="md3-topbar__trailing">
-      <button class="md3-btn md3-btn--icon md3-topbar__btn">
-        <span class="material-symbols-rounded md3-btn__icon"> settings </span>
-      </button>
-      <button class="md3-btn md3-btn--icon md3-topbar__btn" onclick="toggleDarkMode()">
-        <span class="material-symbols-rounded md3-btn__icon">
-          dark_mode
-        </span>
-      </button>
-      <button class="md3-btn md3-btn--icon md3-topbar__btn">
-        <img class="md3-btn__icon" src="./img/user.png" alt="Ricardo's picture" />
-      </button>
-    </section>
-  </header>
-  <footer>
-    <span>Desarrollado por:</span>
-    <span>Ricardo Barrios García</span>
-  </footer>
-  <main>
-    <h3>Bienvenido al módulo de votaciones</h3>
-    <h6>Juanito Perez - Mesa #3</h6>
-    <p>
-      Puedes votar por cualquiera de los siguientes candidatos para el
-      Gobierno Escolar 2024 del Colegio ACME.
-    </p>
-    <form id="acme-choice">
-      <input class="acme-choice__radio" type="radio" name="choice" id="01" />
-      <label for="01">
-        <div class="md3-card md3-card--filled">
-          <img src="./img/icon-1.png" alt="" />
-          <span class="name">Betty Laura Marmol Pedraza</span>
-          <span class="code">01</span>
-        </div>
-      </label>
-      <input class="acme-choice__radio" type="radio" name="choice" id="02" />
-      <label for="02">
-        <div class="md3-card md3-card--filled">
-          <img src="./img/icon-2.png" alt="" />
-          <span class="name">Vilma Johana Picapiedra Lisa</span>
-          <span class="code">02</span>
-        </div>
-      </label>
-      <input class="acme-choice__radio" type="radio" name="choice" id="03" />
-      <label for="03">
-        <div class="md3-card md3-card--filled">
-          <img src="./img/icon-3.png" alt="" />
-          <span class="name">Marge Rosa Simpson Acevedo</span>
-          <span class="code">03</span>
-        </div>
-      </label>
-      <input class="acme-choice__radio" type="radio" name="choice" id="04" />
-      <label for="04">
-        <div class="md3-card md3-card--filled">
-          <span class="name">Voto en Blanco</span>
-        </div>
-      </label>
-      <button class="md3-btn md3-btn--filled" type="submit">
-        <span class="md3-btn__text">Votar</span>
-      </button>
-    </form>
-  </main>
-
-  <!-- Material Design -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/monet.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/material-you.js"></script>
-  <!-- ACME -->
-  <script src="./js/app.js"></script>
-</body>
-
+    <!-- Material Design -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/monet.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/material-you.js"></script>
+    <!-- ACME -->
+    <script src="./js/app.js"></script>
+  </body>
 </html>
