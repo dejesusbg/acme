@@ -56,5 +56,5 @@ footer ~ main {
 }
 
 .md3-nav, .md3-topbar--scrolled {
-    background: var(--color-surface-e3);
+    background: var(--color-surface-e3) !important;
 }
