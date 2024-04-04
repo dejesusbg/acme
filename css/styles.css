@@ -54,3 +54,7 @@ footer ~ main {
     margin-left: -1rem;
   }
 }
+
+.md3-nav, .md3-topbar--scrolled {
+    background: var(--color-surface-e3);
+}
