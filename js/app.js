@@ -98,7 +98,6 @@ function filterTable(input) {
   return true;
 }
 
-
 // get date + fallback
 function getDate(){
   const url = "https://cors-anywhere.herokuapp.com/https://www.timeapi.io/api/Time/current/zone?timeZone=America/Bogota",
