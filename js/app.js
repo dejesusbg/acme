@@ -1,5 +1,5 @@
 colorScheme("#2b506d", "#d83a55");
-toggleDarkMode();
+// toggleDarkMode();
 
 // sufrage list
 function voteDialog(e) {
