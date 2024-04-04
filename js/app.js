@@ -57,8 +57,8 @@ Array.from(news).forEach((n) => {
 
 // log in as estudiante or jurado
 function login(form) {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
+  const queryString = window.location.search,
+    urlParams = new URLSearchParams(queryString);
 
   let userType = 0;
   if (urlParams.size) {
@@ -96,4 +96,21 @@ function filterTable(input) {
   }
 
   return true;
+}
+
+
+// get date + fallback
+function getDate(){
+  const url = "https://cors-anywhere.herokuapp.com/https://www.timeapi.io/api/Time/current/zone?timeZone=America/Bogota",
+    options = {};
+
+  let date;
+
+  try {
+    fetch(url, options)
+      .then( res => res.json() )
+      .then( d => {date = d} );
+  } catch (error) {
+    date = new Date();
+  }
 }
