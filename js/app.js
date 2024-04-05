@@ -107,32 +107,35 @@ function filterTable(input) {
 }
 
 // Obtener fecha de API o local
-var date;
-function getDate() {
-  const url =
-      "https://cors-anywhere.herokuapp.com/https://www.timeapi.io/api/Time/current/zone?timeZone=America/Bogota",
-    options = {};
+var date,
+  time = document.getElementById("acme-time");
 
-  let localDate = {
-    hour: ('0' + new Date().getHours()).slice(-2),
-    min: ('0' + new Date().getMinutes()).slice(-2),
+if (time) {
+  function getDate() {
+    const url =
+        "https://cors-anywhere.herokuapp.com/https://www.timeapi.io/api/Time/current/zone?timeZone=America/Bogota",
+      options = {};
+
+    let localDate = {
+      hour: ("0" + new Date().getHours()).slice(-2),
+      min: ("0" + new Date().getMinutes()).slice(-2),
+    };
+
+    date = localDate.hour + ":" + localDate.min;
+
+    try {
+      fetch(url, options)
+        .then((res) => res.json())
+        .then((obj) => {
+          date = obj.time;
+        });
+    } catch (err) {}
+
+    setTimeout(() => {
+      time.innerHTML = date;
+    }, 1000);
   }
 
-  date = localDate.hour + ":" + localDate.min;
-
-  try {
-    fetch(url, options)
-      .then((res) => res.json())
-      .then((obj) => {
-        date = obj.time;
-      });
-  } catch (err) {}
-
-  setTimeout(() => {
-    let time = document.getElementById("acme-time");
-    time.innerHTML = date;
-  }, 1000);
+  getDate();
+  setInterval(getDate, 30000);
 }
-
-getDate();
-setInterval(getDate, 30000);
