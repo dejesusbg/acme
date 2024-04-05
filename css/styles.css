@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Google+Sans+Display|Google+Sans:400,500|Google+Sans+Text:400,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400..700,0..1,0");
 
 /* header */
 header .md3-topbar__leading img {
@@ -20,6 +20,7 @@ header .md3-topbar__trailing img {
 
 /* footer */
 footer {
+  display: inline-flex;
   position: fixed;
   width: 100%;
   height: min-content;
@@ -28,11 +29,16 @@ footer {
   z-index: 8;
   bottom: 0;
   left: 0;
-  background-color: var(--color-surface-e2);
+  gap: 0.25rem;
+  background-color: var(--color-surface-e3);
 }
 
 footer span:nth-child(1) {
   font-weight: 400;
+}
+
+footer #acme-time {
+  margin-left: auto;
 }
 
 footer ~ main {
@@ -42,9 +48,14 @@ footer ~ main {
 .md3-nav ~ footer {
   left: 1rem;
   margin-left: 4rem;
+  width: calc(100% - 8rem);
 }
 
 @media screen and (max-width: 512px) {
+  footer {
+    width: calc(100% - 3rem);
+  }
+
   .md3-nav ~ footer ~ main {
     margin-bottom: 7.5rem !important;
   }
@@ -55,6 +66,34 @@ footer ~ main {
   }
 }
 
-.md3-nav, .md3-topbar--scrolled {
-    background: var(--color-surface-e3) !important;
+/* body {
+  --color-surface-e1: var(--color-surface-e2) !important;
+  --color-surface-e2: var(--color-surface-e3) !important;
+  --color-surface-e3: var(--color-surface-e4) !important;
+} */
+
+/* .md3-nav,
+.md3-topbar--scrolled {
+  background: var(--color-surface-e3) !important;
+}
+
+.md3-nav__item:hover {
+  background: var(--color-surface-e4) !important;
+} */
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48 !important;
+}
+
+.md3-nav__item-radio:checked + .md3-nav__item .md3-nav__item__icon {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48 !important;
+}
+
+body.light .md3-nav__item-radio:checked + .md3-nav__item .md3-nav__item__icon {
+  color: var(--color-on-primary) !important;
+  background: var(--color-primary) !important;
+}
+
+body.dark .md3-nav__item-radio:checked + .md3-nav__item .md3-nav__item__icon {
+  background: var(--color-primary-container) !important;
 }

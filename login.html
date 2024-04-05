@@ -25,6 +25,12 @@
     <main>
       <button
         class="md3-btn md3-btn--icon md3-topbar__btn"
+        onclick="history.back()"
+      >
+        <span class="material-symbols-rounded md3-btn__icon"> arrow_back </span>
+      </button>
+      <button
+        class="md3-btn md3-btn--icon md3-topbar__btn"
         onclick="toggleDarkMode()"
         style="float: right"
       >
@@ -35,10 +41,12 @@
         <img src="./img/escudo.png" alt="Badge Colegio ACME" />
         <section>
           <div>
-            <h4>Iniciar sesión</h4>
-            <p>Ingresa a tu cuenta para votar</p>
+            <h4>Elecciones ACME</h4>
+            <p id="acme-login-txt">
+              Inicia sesión en tu cuenta para votar como
+            </p>
           </div>
-          <form onsubmit="return login(this)" method="get">
+          <form id="acme-login-form" method="get">
             <input
               class="md3-input--text"
               id="user"

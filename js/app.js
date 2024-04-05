@@ -1,7 +1,8 @@
 colorScheme("#2b506d", "#d83a55");
-// toggleDarkMode();
+document.body.classList.add("light");
+document.body.classList.remove("dark");
 
-// sufrage list
+// Simulación del voto
 function voteDialog(e) {
   e.onclick = () => {
     let info = document.getElementById("acme-student-info");
@@ -33,7 +34,7 @@ function voteDialog(e) {
       btn.disabled = true;
 
       customCloseDialog(dialog, true);
-      // sistema da la orden de que el estudiante votó
+      // Sistema da la orden de que el estudiante votó
       setTimeout(studentVoted, 10000);
     };
   };
@@ -43,7 +44,7 @@ document
   .querySelectorAll("tr:not(.acme-table--voted):nth-child(n + 2)")
   .forEach((e) => voteDialog(e));
 
-// read more on news
+// Leer descripción de la noticia
 let news = document.getElementsByClassName("acme-news");
 Array.from(news).forEach((n) => {
   n.onclick = () => {
@@ -55,27 +56,34 @@ Array.from(news).forEach((n) => {
   };
 });
 
-// log in as estudiante or jurado
-function login(form) {
-  const queryString = window.location.search,
-    urlParams = new URLSearchParams(queryString);
+// Iniciar sesión como Estudiante o Jurado
+var loginForm = document.getElementById("acme-login-form"),
+  loginRole = false;
 
-  let userType = 0;
-  if (urlParams.size) {
-    userType = urlParams.get("userType");
+if (loginForm) {
+  function userRole() {
+    const queryString = window.location.search,
+      urlParams = new URLSearchParams(queryString);
+
+    if (urlParams.size && urlParams.get("userType") == "1") {
+      loginRole = true;
+    }
+
+    let loginText = document.getElementById("acme-login-txt");
+    loginText.innerHTML += loginRole ? " jurado" : " estudiante";
   }
 
-  let userEmail = document.getElementById("user");
-  let nextPage = userType == "1" ? "./sufrage.html" : "./vote.html";
+  loginForm.onsubmit = () => {
+    loginForm.action = loginRole ? "./sufrage.html" : "./vote.html";
+    return true;
+  };
 
-  // form.action = nextPage + "?u=" + userEmail.value;
-  form.action = nextPage;
-  return true;
+  userRole();
 }
 
-// filter table
+// Filtrar tabla de sufragantes
 function filterTable(input) {
-  let filter, table, tr, td, i, txtValue;
+  let filter, table, tr, td, txtValue;
   filter = input.value.toUpperCase();
   table = document.getElementById("acme-students");
   tr = table.getElementsByTagName("tr");
@@ -98,18 +106,29 @@ function filterTable(input) {
   return true;
 }
 
-// get date + fallback
-function getDate(){
-  const url = "https://cors-anywhere.herokuapp.com/https://www.timeapi.io/api/Time/current/zone?timeZone=America/Bogota",
+// Obtener fecha de API o local
+var date;
+function getDate() {
+  const url =
+      "https://cors-anywhere.herokuapp.com/https://www.timeapi.io/api/Time/current/zone?timeZone=America/Bogota",
     options = {};
 
-  let date;
+  let localDate = new Date();
+  date = localDate.getHours() + ":" + localDate.getMinutes();
 
   try {
     fetch(url, options)
-      .then( res => res.json() )
-      .then( d => {date = d} );
-  } catch (error) {
-    date = new Date();
-  }
+      .then((res) => res.json())
+      .then((obj) => {
+        date = obj.time;
+      });
+  } catch (err) {}
+
+  setTimeout(() => {
+    let time = document.getElementById("acme-time");
+    time.innerHTML = date;
+  }, 1000);
 }
+
+getDate();
+setInterval(getDate, 30000);
