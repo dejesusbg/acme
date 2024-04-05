@@ -113,8 +113,12 @@ function getDate() {
       "https://cors-anywhere.herokuapp.com/https://www.timeapi.io/api/Time/current/zone?timeZone=America/Bogota",
     options = {};
 
-  let localDate = new Date();
-  date = localDate.getHours() + ":" + localDate.getMinutes();
+  let localDate = {
+    hour: ('0' + new Date().getHours()).slice(-2),
+    min: ('0' + new Date().getMinutes()).slice(-2),
+  }
+
+  date = localDate.hour + ":" + localDate.min;
 
   try {
     fetch(url, options)
