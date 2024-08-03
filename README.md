@@ -1,20 +1,25 @@
-- Cambiar linea #3 del archivo ".htaccess"
+# Cambiar lineas de los siguientes archivos:
 
+- ".htaccess"
+```
 actual:
 # RewriteBase /acme/
 nueva:
 # RewriteBase /nombre_de_la_carpeta/
+```
 
-- Cambiar linea #3 del archivo "index.php"
-
+- "index.php"
+```
 actual:
 # <?php $name = 'acme'; ?>
 nueva:
 # <?php $name = 'nombre_de_la_carpeta'; ?>
+```
 
-- Cambiar linea #5 del archivo "config.json"
-
+- "config.json"
+```
 actual:
 # "database" : "acme"
 nueva:
 # "database" : "nombre_de_la_carpeta"
+```
