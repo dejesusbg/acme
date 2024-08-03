@@ -7,7 +7,7 @@ En caso de cambiar el nombre de la carpeta, se deben cambiar las lineas #3 de lo
 actual:
 # RewriteBase /acme/
 nueva:
-# RewriteBase /nombre_de_la_carpeta/
+# RewriteBase /dir_name/
 ```
 
 - "index.php"
@@ -15,7 +15,7 @@ nueva:
 actual:
 # <?php $name = 'acme'; ?>
 nueva:
-# <?php $name = 'nombre_de_la_carpeta'; ?>
+# <?php $name = 'dir_name'; ?>
 ```
 
 En caso de cambiar el nombre de la base de datos, se deben cambiar la linea #3 del siguiente archivo:
@@ -25,5 +25,5 @@ En caso de cambiar el nombre de la base de datos, se deben cambiar la linea #3 d
 actual:
 # "database" : "acme"
 nueva:
-# "database" : "nombre_de_la_carpeta"
+# "database" : "db_name"
 ```
