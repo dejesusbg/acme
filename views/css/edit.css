@@ -1,0 +1,60 @@
+/* form styling */
+#create-form,
+#edit-form {
+  display: flex;
+  width: calc(100% - 2rem);
+  margin: 0 1rem;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  #create-form,
+  #edit-form {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0 3rem;
+  }
+
+  #create-form div,
+  #edit-form div {
+    flex: calc(50% - 6rem);
+  }
+}
+
+#create-form label,
+#edit-form label {
+  font: var(--font-title-m);
+  color: var(--color-on-primary-container);
+}
+
+#create-form input,
+#create-form select,
+#edit-form input,
+#edit-form select {
+  width: 100%;
+  height: 2.75rem;
+  margin: 0.5rem 0 1rem;
+}
+
+#create-form button,
+#edit-form button {
+  margin-left: auto;
+}
+
+#create-form div:nth-last-child(1),
+#edit-form div:nth-last-child(1) {
+  display: flex;
+  flex: 100%;
+}
+
+.md3-input--submit,
+.md3-input--file::-webkit-file-upload-button {
+  position: relative;
+  top: 0rem;
+  margin-right: 0.75rem;
+}
+
+.md3-input--file {
+  padding: 0.3rem;
+}

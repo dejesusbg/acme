@@ -1,0 +1,18 @@
+/* styling for nav items */
+nav .md3-nav__item-radio:checked + .md3-nav__item .md3-nav__item__icon {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48 !important;
+}
+
+nav .md3-nav__btn {
+  bottom: 7rem !important;
+}
+
+/* colouring */
+body.light .md3-nav__item-radio:checked + .md3-nav__item .md3-nav__item__icon {
+  color: var(--color-on-primary) !important;
+  background: var(--color-primary) !important;
+}
+
+body.dark .md3-nav__item-radio:checked + .md3-nav__item .md3-nav__item__icon {
+  background: var(--color-primary-container) !important;
+}

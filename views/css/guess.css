@@ -1,0 +1,18 @@
+div#guess-game{
+  margin-top: 2rem;
+}
+
+input {
+  margin: 0.5rem !important;
+  margin-left: 1rem !important;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.md3-dialog__text {
+  margin-right: 2rem;
+}

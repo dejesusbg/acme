@@ -1,0 +1,73 @@
+/* card styling */
+div.md3-card {
+  display: flex;
+  margin: 1.5rem 1rem;
+  padding: 2rem 1.5rem;
+  color: var(--color-on-primary-container);
+  cursor: pointer;
+  gap: 1rem;
+  max-width: min-content;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 612px) {
+  div.md3-card {
+    max-width: none;
+  }
+}
+
+/* name styling */
+div.md3-card #student-nombre {
+  font: var(--font-headline-s);
+  text-align: center;
+}
+
+/* stylings for the student container */
+section#student-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+section#student-container img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 612px) {
+  section#student-container {
+    flex-direction: column;
+  }
+
+  section#student-container img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+/* stylings for the student information */
+section#student-info {
+  display: flex;
+  padding: 0.5rem;
+  font: var(--font-body-l);
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+section#student-info span {
+  text-wrap: nowrap;
+}
+
+section#student-info h6 {
+  font-family: "Roboto Mono";
+  margin: 0.75rem 0 -0.75rem;
+  text-align: end;
+}
+
+@media screen and (max-width: 612px) {
+  section#student-info h6 {
+    text-align: center;
+  }
+}

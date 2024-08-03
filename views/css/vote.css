@@ -1,0 +1,51 @@
+/* form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form button[type="submit"] {
+  margin-left: auto !important;
+}
+
+/* card styling */
+div.md3-card {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+  gap: 1rem;
+}
+
+div.md3-card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+input[type="radio"]:checked + label div.md3-card {
+  border: 2px solid var(--color-on-primary-container);
+  transform: scale(0.99);
+}
+
+/* choice's profile picture */
+div.md3-card img {
+  width: 3 0.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+}
+
+/* choice's name */
+div.md3-card span.choice-nombre {
+  font: var(--font-title-l);
+}
+
+/* choice's number */
+div.md3-card span.choice-numero {
+  font: var(--font-headline-l);
+  margin-left: auto;
+  margin-right: 0.75rem;
+}

@@ -1,0 +1,74 @@
+@import url("./templates/carnet.css");
+
+div.md3-card {
+  background: var(--color-surface-e1);
+  border-width: 2px;
+}
+
+section#student-container img {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+section#student-info span {
+  text-align: center;
+}
+
+/* dialog styling */
+dialog .md3-dialog__text {
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+dialog img {
+  height: 8rem;
+}
+
+/* search styling */
+div#search {
+  display: flex;
+  margin: 0 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 512px) {
+  div#search {
+    justify-content: space-between;
+  }
+}
+
+/* styling for tables */
+table {
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  border: 1px solid var(--color-outline);
+  border-radius: 1rem;
+}
+
+/* table header and cells */
+table th,
+table td {
+  padding: 0.4rem 0.6rem;
+}
+
+table td.student-code {
+  font-family: "Roboto Mono";
+  font-size: 90%;
+}
+
+/* styling for rows with a student that already voted */
+table tr.student--voted {
+  background: var(--color-tertiary-container);
+}
+
+/* styling for rows with a student that hasn't voted */
+table tr:not(tr.student--voted):nth-child(n + 2):hover {
+  background: var(--color-surface-variant-e2);
+  cursor: pointer;
+}

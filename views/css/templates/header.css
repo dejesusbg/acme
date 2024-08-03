@@ -1,0 +1,41 @@
+/* images styling */
+header section.md3-topbar__leading img {
+  height: 3.2rem;
+  margin: 0 0.5rem 0 1rem;
+}
+
+header section.md3-topbar__trailing img {
+  width: 2rem;
+  height: 2rem;
+  padding: 0 0.75rem;
+  border-radius: 100%;
+}
+
+/* styling for titles and labels */
+header section.md3-topbar__trailing img ~ span {
+  padding-left: 0 !important;
+}
+
+@media screen and (max-width: 512px) {
+  header section.md3-topbar__leading .md3-topbar__title {
+    display: none;
+  }
+}
+
+/* links styling */
+header section.md3-topbar__leading a {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+}
+
+header section.md3-topbar__leading a:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+/* styling for buttons with form */
+header form {
+  margin-bottom: 0;
+}

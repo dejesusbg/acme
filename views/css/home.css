@@ -1,0 +1,121 @@
+#container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  button.md3-nav__btn {
+    display: none;
+  }
+}
+
+/* individual news items */
+div.acme-news {
+  cursor: pointer;
+  flex: 25%;
+  animation: readLess linear 0.125s;
+}
+
+@media screen and (max-width: 768px) {
+  div.acme-news {
+    flex: 40%;
+    animation: none; /* remove animation on smaller screens */
+  }
+}
+
+@media screen and (max-width: 512px) {
+  div.acme-news {
+    flex: 100%;
+  }
+}
+
+/* expanded news items */
+div.acme-news--read {
+  flex: 60%;
+  animation: readMore linear 0.125s;
+}
+
+/* image styling */
+div.acme-news img.md3-card__media {
+  width: 16rem;
+  height: 12rem;
+}
+
+@media screen and (max-width: 944px) {
+  div.acme-news img.md3-card__media {
+    width: 12rem;
+    height: 9rem;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  div.acme-news img.md3-card__media {
+    width: 100%;
+    height: calc(100vw * 3 / 4);
+  }
+}
+
+/* text styling */
+div.acme-news span.md3-card__text {
+  display: none;
+}
+
+div.acme-news--read span.md3-card__text {
+  display: inline-block;
+}
+
+/* animation keyframes */
+@keyframes readLess {
+  0% {
+    flex: 60%;
+  }
+  100% {
+    flex: 25%;
+  }
+}
+
+@keyframes readMore {
+  0% {
+    flex: 25%;
+  }
+  100% {
+    flex: 60%;
+  }
+}
+
+/* styling for list view */
+@media screen and (min-width: 768px) {
+  #container.list {
+    margin-top: 2rem;
+  }
+
+  #container.list div.acme-news {
+    display: flex;
+    flex: 100%;
+    align-items: center;
+    flex-direction: row-reverse;
+    animation: none; /* remove animation in list views */
+  }
+
+  #container.list div.acme-news div {
+    padding: 1rem;
+    margin-right: auto;
+  }
+
+  #container.list div.acme-news img {
+    height: auto;
+    max-width: 16rem;
+    margin: 0.5rem;
+    margin-left: 2rem;
+  }
+
+  #container.list div.acme-news .md3-card__headline {
+    font: var(--font-headline-m);
+  }
+
+  #container.list div.acme-news .md3-card__text {
+    display: inline-block;
+    font: var(--font-body-l);
+  }
+}

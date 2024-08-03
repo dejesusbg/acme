@@ -1,0 +1,59 @@
+table {
+  margin: 1.5rem 1rem;
+  border: 1px solid var(--color-outline);
+  border-radius: 1rem;
+}
+
+table.acme-data--width {
+  width: calc(100% - 2rem);
+  overflow: auto;
+}
+
+@media screen and (max-width: 1052px) {
+  table {
+    width: calc(100% - 2rem);
+    overflow: auto;
+  }
+
+  table.acme-data--width {
+    display: block;
+  }
+}
+
+::-webkit-scrollbar-track {
+  margin: 0.5rem;
+  border-radius: 100%;
+}
+
+/* table header and cells */
+table th,
+table td {
+  padding: 0.4rem 0.6rem;
+  text-align: center;
+}
+
+table button {
+  cursor: pointer;
+}
+
+table img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.25rem;
+  border-radius: 100%;
+}
+
+/* search styling */
+div#search {
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 512px) {
+  div#search {
+    justify-content: space-between;
+  }
+}
