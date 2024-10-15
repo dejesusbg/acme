@@ -200,7 +200,7 @@ INSERT INTO
 VALUES
     (
         'Ricardo Barrios',
-        'dejesusbg5@gmail.com',
+        'ricardo@acme.com',
         'clave358',
         '2005-08-03',
         6,

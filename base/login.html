@@ -11,29 +11,16 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/login.css" />
     <!-- Material Design -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/components.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/styles.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dejesusbg/md3/styles/components.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dejesusbg/md3/styles/styles.css" />
   </head>
 
   <body>
     <main>
-      <button
-        class="md3-btn md3-btn--icon md3-topbar__btn"
-        onclick="history.back()"
-      >
+      <button class="md3-btn md3-btn--icon md3-topbar__btn" onclick="history.back()">
         <span class="material-symbols-rounded md3-btn__icon"> arrow_back </span>
       </button>
-      <button
-        class="md3-btn md3-btn--icon md3-topbar__btn"
-        onclick="toggleDarkMode()"
-        style="float: right"
-      >
+      <button class="md3-btn md3-btn--icon md3-topbar__btn" onclick="toggleDarkMode()" style="float: right">
         <span class="material-symbols-rounded md3-btn__icon"> dark_mode </span>
       </button>
 
@@ -42,24 +29,11 @@
         <section>
           <div>
             <h4>Elecciones ACME</h4>
-            <p id="acme-login-txt">
-              Inicia sesión en tu cuenta para votar como
-            </p>
+            <p id="acme-login-txt">Inicia sesión en tu cuenta para votar como</p>
           </div>
           <form id="acme-login-form" method="get">
-            <input
-              class="md3-input--text"
-              id="user"
-              type="email"
-              placeholder="example@acme.com"
-              required
-            />
-            <input
-              class="md3-input--text"
-              type="password"
-              placeholder="password"
-              required
-            />
+            <input class="md3-input--text" id="user" type="email" placeholder="example@acme.com" required />
+            <input class="md3-input--text" type="password" placeholder="password" required />
             <button class="md3-btn md3-btn--filled" type="submit">
               <span class="md3-btn__text">Entrar</span>
             </button>
@@ -70,8 +44,8 @@
     <!-- Material Design -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/monet.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dejesusbg5/md3/script/material-you.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dejesusbg/md3/script/monet.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dejesusbg/md3/script/material-you.js"></script>
     <!-- ACME -->
     <script src="./js/app.js"></script>
   </body>
