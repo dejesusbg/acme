@@ -10,8 +10,8 @@
 @import url("./templates/nav.css");
 
 /* material design 3 */
-@import url("https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/components.css");
-@import url("https://cdn.jsdelivr.net/gh/dejesusbg5/md3/styles/styles.css");
+@import url("https://cdn.jsdelivr.net/gh/dejesusbg/md3/styles/components.css");
+@import url("https://cdn.jsdelivr.net/gh/dejesusbg/md3/styles/styles.css");
 
 :root {
   --font-name: "Cabinet Grotesk" !important;
